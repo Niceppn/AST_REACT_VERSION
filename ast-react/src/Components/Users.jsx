@@ -1,4 +1,5 @@
 // src/components/Users.jsx
+import { API_URL } from '../config';
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -16,7 +17,7 @@ const Users = () => {
     user_type: 'materialstaff'
   });
 
-  const API_URL = 'http://128.199.238.141:8000/api';
+  // const API_URL = 'http://128.199.238.141:8000/api';
 
   // Generate avatar initials
   const getAvatarInitials = (name) => {

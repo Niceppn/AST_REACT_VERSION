@@ -1,3 +1,5 @@
+import { API_URL } from '../config';
+
 import React, { useState, useEffect } from 'react';
 import ExcelJS from 'exceljs';
 import { saveAs } from 'file-saver';
@@ -222,7 +224,7 @@ const RawMaterialInventoryInfo = () => {
     setError(null);
 
     try {
-      const response = await fetch('http://localhost:8000/api/raw-materials/stockMaterial');
+      const response = await fetch(`${API_URL}/raw-materials/stockMaterial`);
       
       if (!response.ok) {
         throw new Error(`Error จ้า: ${response.status}`);

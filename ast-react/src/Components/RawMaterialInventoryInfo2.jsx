@@ -1,4 +1,5 @@
 // src/components/RawMaterialInventoryInfo.jsx
+import { API_URL } from '../config';
 
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -56,7 +57,7 @@ const RawMaterialInventoryInfo2 = () => {
     setError(null);
 
     try {
-      const response = await fetch('http://localhost:8000/api/raw-materials');
+      const response = await fetch(`${API_URL}/raw-materials`);
       
       if (!response.ok) {
         throw new Error(`Error จ้า: ${response.status}`);
